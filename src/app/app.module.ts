@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { Router,RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
+import { UserService} from './user.service';
+import { HttpModule } from '@angular/http';
 
 
 const routes: Routes = [
@@ -26,9 +28,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
