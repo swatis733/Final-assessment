@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   loginonclick(email,password){
+    console.log(" in login");
     this.service.getUser(email).subscribe(res=>{
+      console.log('Inside service');
       this.user=JSON.parse(res.text());
       console.log(this.user.password);
       if(this.user==null){
@@ -23,6 +25,8 @@ export class LoginComponent implements OnInit {
       else if(this.user.password == password){
         this.service.role=this.user.role;
         this.service.email=this.user.email;
+        this.service.Shows=true;
+        console.log("Entered next page");
         this.router.navigate(['/NextPage']);
       }
       else{

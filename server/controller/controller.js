@@ -26,7 +26,7 @@ exports.newUser = (req, res) => {
 
 exports.getUser = (req,res) => {
     var email = req.params.email;
-    user.findOne({email: email}, (error, response) => {
+    User.findOne({email: email}, (error, response) => {
         if (error) {
             return res.json(req, res, error);
         }
@@ -39,7 +39,8 @@ exports.newSeries = (req, res) => {
     series_name:req.body.series_name,
     series_id: req.body.series_id,
     category: req.body.category,
-    category_id: req.body.category_id
+    category_id: req.body.category_id,
+    series_image: req.body.series_image
         
     });
     series.save((error, response) => {
@@ -55,14 +56,23 @@ exports.newSeries = (req, res) => {
 } 
 
 exports.getSeries = (req,res) => {
-    var category_id= req.params.category_id;
-    series.findOne({category_id: category_id}, (error, response) => {
+    Series.find({}, (error, response) => {
         if (error) {
             return res.json(req, res, error);
         }
         res.json(response);
     });
 }
+
+// exports.getSeries = (req,res) => {
+//     var category_id= req.params.category_id;
+//     series.findOne({category_id: category_id}, (error, response) => {
+//         if (error) {
+//             return res.json(req, res, error);
+//         }
+//         res.json(response);
+//     });
+// }
 
 exports.newSeason = (req, res) => {
     var season= new Season({
@@ -124,7 +134,8 @@ exports.getEpisode = (req,res) => {
 exports.newMovie = (req, res) => {
     var movie= new Movie({
         movie_name :req.body.movie_name,
-        movie_id: req.body.movie_id
+        movie_image: req.body.movie_image,
+        movie_category:req.body.movie_category
         
     });
     movie.save((error, response) => {
@@ -140,8 +151,7 @@ exports.newMovie = (req, res) => {
 } 
 
 exports.getMovie = (req,res) => {
-    var moviename= req.params.movie_name;
-    movie.findOne({movie_name: moviename}, (error, response) => {
+    Movie.find({}, (error, response) => {
         if (error) {
             return res.json(req, res, error);
         }

@@ -11,7 +11,7 @@ router.route('/v1/getUser/:email')
 router.route('/v1/newSeries') 
      .post(usercontroller.newSeries);
 
-router.route('/v1/getSeries/:category_id') 
+router.route('/v1/getSeries') 
      .get(usercontroller.getSeries);
 
 router.route('/v1/newSeason') 
@@ -29,7 +29,7 @@ router.route('/v1/getEpisode/:epiid')
 router.route('/v1/newMovie') 
      .post(usercontroller.newMovie);
 
-router.route('/v1/getMovie/:moviename') 
+router.route('/v1/getMovie') 
       .get(usercontroller.getMovie);
 
 module.exports = router;

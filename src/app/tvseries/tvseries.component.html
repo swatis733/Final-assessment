@@ -1,0 +1,15 @@
+<body>
+  
+   <br><br><br>
+     <td *ngFor="let p of series">
+         <div class="col-md-10">
+           <div class="thumbnail">
+           <img src="{{p.series_image }}" width="250px" height="450px">
+             <div class="caption">
+               <h4>{{p.series_name}}</h4>
+               <h4>{{p.category}}</h4>
+             </div>
+           </div>
+         </div>
+      </td>    
+</body>

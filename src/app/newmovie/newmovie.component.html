@@ -1,0 +1,15 @@
+<body>
+    
+     <br><br><br>
+       <td *ngFor="let p of movie">
+           <div class="col-md-10">
+             <div class="thumbnail">
+             <img src="{{p.movie_image}}" width="300px">
+               <div class="caption">
+                 <h4>{{p.movie_name}}</h4>
+                 <h4>{{p.movie_category}}</h4>
+               </div>
+             </div>
+           </div>
+        </td>
+</body>

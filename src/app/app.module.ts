@@ -9,12 +9,19 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserService} from './user.service';
 import { HttpModule } from '@angular/http';
+import { NextpageComponent } from './nextpage/nextpage.component';
+import { NewmovieComponent } from './newmovie/newmovie.component';
+import { TvseriesComponent } from './tvseries/tvseries.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'NextPage' , component: NextpageComponent},
+  { path: '' , component: HomeComponent},
+  { path: 'newmovie', component: NewmovieComponent },
+  { path: 'tvseries', component:TvseriesComponent }
   
 ];
 
@@ -24,7 +31,10 @@ const routes: Routes = [
     LoginComponent,
     HeaderComponent,
     HomeComponent,
-    SignupComponent
+    SignupComponent,
+    NextpageComponent,
+    NewmovieComponent,
+    TvseriesComponent
   ],
   imports: [
     BrowserModule,

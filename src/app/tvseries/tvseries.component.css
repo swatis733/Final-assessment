@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+    height: 650px;
+}
+.col-md-10{
+    width: 300px;
+    height:450px ;
+}
+img{
+    width: 300px;
+    height:300px ;
+    margin: 20px;
+}
+.caption{
+    width: 190px;
+    height:150px;
+    margin: 20px;
+}
+h4
+{
+    color: white;
+}

@@ -2,7 +2,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-
+var cors= require('cors');
 // Connect to the MongoDB
 mongoose.connect('mongodb://localhost:27017/netflixdb');
 
@@ -16,6 +16,7 @@ app.set('env', process.env.NODE_ENV || 'production');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
+app.use(cors());
 
 routes = require('./routes/routes')
 app.use('/api', routes);

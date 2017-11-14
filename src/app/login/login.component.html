@@ -1,8 +1,9 @@
 
 <form>
-  <h4> Login Information </h4>
-  <input class="name" type="text" placeholder="Enter Username" #email/>
+  <h2> Login  </h2>
+  <br>
+  <input class="name" type="text" placeholder="Enter Email" #email/>
   <input class="pw" type="password" placeholder="Enter Password" #password/>
 
-  <input class="button" type="submit" value="Log in" (click)="loginonclick()"/>
+  <input class="button" value="Log in" (click)="loginonclick(email.value, password.value)"/>
 </form>
