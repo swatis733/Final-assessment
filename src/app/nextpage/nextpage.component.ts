@@ -10,8 +10,9 @@ export class NextpageComponent implements OnInit {
  
   constructor(private service: UserService, private router : Router) { }
   
-  ngOnInit() {
+  ngOnInit() {    
   }
+  
   
   logout() {
     this.service.email = '';
@@ -25,5 +26,11 @@ export class NextpageComponent implements OnInit {
   onclickseries(){
     console.log("button")
     this.router.navigate(['/tvseries']);
-  } 
+  }
+
+  onclickedit(){
+    this.router.navigate(['/edit']);
+  }
+  
+
 }

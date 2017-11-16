@@ -12,6 +12,7 @@ import { HttpModule } from '@angular/http';
 import { NextpageComponent } from './nextpage/nextpage.component';
 import { NewmovieComponent } from './newmovie/newmovie.component';
 import { TvseriesComponent } from './tvseries/tvseries.component';
+import { EditComponent } from './edit/edit.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'NextPage' , component: NextpageComponent},
   { path: '' , component: HomeComponent},
   { path: 'newmovie', component: NewmovieComponent },
-  { path: 'tvseries', component:TvseriesComponent }
+  { path: 'tvseries', component:TvseriesComponent },
+  { path: 'edit', component: EditComponent },
   
 ];
 
@@ -34,7 +36,8 @@ const routes: Routes = [
     SignupComponent,
     NextpageComponent,
     NewmovieComponent,
-    TvseriesComponent
+    TvseriesComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

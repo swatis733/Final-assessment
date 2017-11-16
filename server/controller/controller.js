@@ -135,7 +135,8 @@ exports.newMovie = (req, res) => {
     var movie= new Movie({
         movie_name :req.body.movie_name,
         movie_image: req.body.movie_image,
-        movie_category:req.body.movie_category
+        movie_category:req.body.movie_category,
+        // updated_at: ""
         
     });
     movie.save((error, response) => {
@@ -159,6 +160,31 @@ exports.getMovie = (req,res) => {
     });
 }
 
+exports.deleteMovie = function(req,res){
+    var name = req.params.movie_name;
+    Movie.findOne({movie_name: name}, function(error,emp) {
+        if(error){
+          res.json(error);
+        }
+        Movie.remove({movie_name: name},function(err,qres){
+            if(err){
+              res.json(err);
+            }
+            res.json("Successfully Deleted");
+        });
+    });
+  }
+  
+  exports.updateMovie = function (req, res) {
+    var name = req.params.movie_name;
+    Movie.findOneAndUpdate({movie_name: name},req.body,{new: true}, function (err, Movie) {
+        console.log("ara kya");
+        if (err) {
+            res.send(err);
+        }
+        res.json(Movie);
+    })
+}
 
 
 

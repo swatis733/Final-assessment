@@ -32,4 +32,9 @@ router.route('/v1/newMovie')
 router.route('/v1/getMovie') 
       .get(usercontroller.getMovie);
 
+router.route('/v1/deleteMovie/:movie_name') 
+      .delete(usercontroller.deleteMovie);
+
+router.route('/v1/updateMovie/:movie_name') 
+      .put(usercontroller.updateMovie);
 module.exports = router;

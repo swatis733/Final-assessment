@@ -4,14 +4,15 @@
       <br>
         Welcome to Newapp
       </div></h1>
-    <button class="" (click)="home()"> Home </button>
-    <button class="" (click)="login()"> Login </button>
-    <button class="" (click)="signup()"> Sign up </button>
-    <ng-template [ngIf]="this.service.Shows"><div align="right"> <input  type="button" (click)="logout()" value="Logout"></div>
-       </ng-template> 
-    <div class="collapse navbar-collapse" id="myNavbar">
-     <ul class="nav navbar-nav navbar-right">
-      </ul>
+          <button class="" (click)="home()"> Home </button>
+             <ng-template [ngIf]="!this.service.shows1"><button class="" (click)="login()"> Login </button>
+                                                         <button class="" (click)="signup()"> Sign up </button> 
+             </ng-template>
+    
+             <ng-template [ngIf]="this.service.Shows"><div align="right"> <input  type="button" (click)="logout()" value="Logout"></div>
+             </ng-template> 
+          <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav navbar-right"></ul>
     </div>
   </nav>
 </div>

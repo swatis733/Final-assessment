@@ -1,0 +1,32 @@
+
+ <h3>Add Movie</h3>
+ <label for="movie_name">Name</label>
+ <input type="text"  required #name><br>
+ <label for="movie_image">Image url</label>
+ <input type="text" required #image>  <br>
+  <label for="movie_category">Category</label>
+<input type="text" required #category><br>
+   <br> <br>
+<div align="center"><input type="button" value="Submit" (click)="newmovie(name.value, image.value, category.value)" > 
+ </div>
+ <br>
+
+ <h3>Delete Movie</h3>
+ <label for="movie_name">Name</label>
+ <input type="text"  required #mname><br>
+ <br> <br>
+<div align="center"><input type="button" value="Delete" (click)="delmovie(mname.value)" > 
+ </div>
+ <br>
+
+ <!-- <h3>Update Movie</h3>
+ <label for="movie_name">Name</label>
+ <input type="text"  required #upname><br>
+ <!-- <label for="movie_image">Image url</label>
+ <input type="text" required #upimage>  <br>
+  <label for="movie_category">Category</label>
+<input type="text" required #upcategory><br> -->
+   <!-- <br> <br>
+<div align="center"><input type="button" value="Update" (click)="newmovie(upname.value)" > 
+ </div>
+ <!-- <br> -->

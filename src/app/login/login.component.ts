@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
         this.service.role=this.user.role;
         this.service.email=this.user.email;
         this.service.Shows=true;
+        this.service.shows1=true;
         console.log("Entered next page");
         this.router.navigate(['/NextPage']);
       }

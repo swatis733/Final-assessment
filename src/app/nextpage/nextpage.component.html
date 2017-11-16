@@ -1,6 +1,7 @@
  
 <input type="button" class="button" value="New Movies" (click)="onclick()">
 <input type="button" class="button" value="TV Series"  (click)= "onclickseries()">
+<ng-template [ngIf]="!service.role"><input type="button" class="button" value="Edit" (click)="onclickedit()"></ng-template>
 
 <div id="slider">
     

@@ -1,14 +1,4 @@
-/* * {
-    margin:0;
-    padding:0;
-    font-family: 'Source Sans Pro', sans-serif;
-  } */
-  
-  /* body {
-    background:#2c3e50; 
-    background-image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx1ZeyoKFvIPXQMbXUIBsQgyVXop3oyqOGI41BiJGeL7jKNX-v";
-  } */
-  
+
   form {
     position:relative;
     width:360px;
@@ -18,15 +8,6 @@
     background:#9be4de;
     padding:40px; 
   }
-  
-  /* h4 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:2em;
-    font-weight:300;
-    margin-bottom:25px;
-    color:#0c2022;
-    text-shadow:1px 1px 0px white;
-  } */
   
   input {
     display:block;
@@ -42,18 +23,6 @@
     font-size:16px;
   }
   
-  /* input:focus {
-    background:#fafafa;
-  } */
-  
-/*   
-  li {
-    position:absolute;
-    right:40px;
-    bottom:62px;
-    list-style:none;
-  } */
-    
   .button {
     position:relative;
     float:left;
