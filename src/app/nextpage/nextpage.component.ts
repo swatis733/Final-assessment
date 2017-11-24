@@ -16,6 +16,8 @@ export class NextpageComponent implements OnInit {
   
   logout() {
     this.service.email = '';
+    this.service.role = -1;
+    localStorage.removeItem('token');
     this.router.navigate(["/home"]);
   }
   onclick(){

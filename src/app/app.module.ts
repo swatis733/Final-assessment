@@ -13,6 +13,8 @@ import { NextpageComponent } from './nextpage/nextpage.component';
 import { NewmovieComponent } from './newmovie/newmovie.component';
 import { TvseriesComponent } from './tvseries/tvseries.component';
 import { EditComponent } from './edit/edit.component';
+import { SeasonComponent } from './season/season.component';
+import { EpisodeComponent } from './episode/episode.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'newmovie', component: NewmovieComponent },
   { path: 'tvseries', component:TvseriesComponent },
   { path: 'edit', component: EditComponent },
+  { path: 'season/:series_id', component: SeasonComponent },
+  { path: 'episode/:series_id/:season_id', component: EpisodeComponent }
   
 ];
 
@@ -37,7 +41,9 @@ const routes: Routes = [
     NextpageComponent,
     NewmovieComponent,
     TvseriesComponent,
-    EditComponent
+    EditComponent,
+    SeasonComponent,
+    EpisodeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+<body>
+  
+   <br><br><br>
+     <td *ngFor="let p of seasons">
+         <div class="col-md-10">
+           <div class="thumbnail">
+           <img src="{{ p.season_image}}" width="250px" height="450px">
+             <div class="caption">
+               <h4>{{p.season_name}}</h4>
+               <h4>{{p.category}}</h4>
+             </div>
+           </div>
+           <div><input type="button" value="Episode" (click)="episode(p.series_id,p.season_id)"></div>
+         </div>
+      </td>    
+</body>

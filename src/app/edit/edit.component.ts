@@ -14,7 +14,7 @@ export class EditComponent implements OnInit {
 
   }
   newmovie(name:string,image:string, category:string) {
-    this.service.newmovie(name,image,category).subscribe();  
+    this.service.new_movie(name,image,category).subscribe();  
     alert("Movie added successfully");
     }
 
@@ -23,8 +23,8 @@ export class EditComponent implements OnInit {
     alert("Movie deleted successfully");
   } 
 
-  // updatemovie(upname:string){
-  //   this.service.updatemovie(upname).subscribe();  
-  //   alert("Movie updated successfully");
-  // }
+  updatemovie(){
+    this.service.updatemovie().subscribe();  
+    alert("Movie updated successfully");
+  }
 }

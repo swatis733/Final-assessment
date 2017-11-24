@@ -10,29 +10,34 @@ import {Router} from '@angular/router'
 export class LoginComponent implements OnInit {
   user : any;
   constructor(private service: UserService, private router: Router) { }
-
   ngOnInit() {
   }
   loginonclick(email,password){
     console.log(" in login");
-    this.service.getUser(email).subscribe(res=>{
+    this.service.getUser(email,password).subscribe(res=>{
       console.log('Inside service');
       this.user=JSON.parse(res.text());
-      console.log(this.user.password);
-      if(this.user==null){
-        alert("Not a valid user");
-      }
-      else if(this.user.password == password){
-        this.service.role=this.user.role;
-        this.service.email=this.user.email;
+      console.log(this.user);
+      var token =this.user.token;
+      localStorage.setItem('token', this.user.token);
+      if(this.user.success) {
+        const base64Url = token.split('.')[1];
+        const base64 = base64Url.replace('-', '+').replace('_', '/');
+        console.log(JSON.parse(window.atob(base64)).role );      
+        this.service.email = JSON.parse(window.atob(base64)).email;      
+        this.service.role = parseInt(JSON.parse(window.atob(base64)).role, 10);
         this.service.Shows=true;
-        this.service.shows1=true;
+        // localStorage.getItem('token');
+        //this.service.shows1=true;
         console.log("Entered next page");
         this.router.navigate(['/NextPage']);
       }
       else{
-        alert("Password incorrect");
-      }
+           alert(this.user.body);
+       }
+      // else{
+      //   alert("Password incorrect");
+      // }
 
     })
   }

@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./newmovie.component.css']
 })
 export class NewmovieComponent implements OnInit {
-
   constructor(private service: UserService, private router : Router) { }
   public movie:any=[];
 

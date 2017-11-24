@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-tvseries',
   templateUrl: './tvseries.component.html',
@@ -16,6 +16,9 @@ export class TvseriesComponent implements OnInit {
       console.log(this.series);
       })
     }
-  
+    
+    season(series_id: number){
+      console.log("ara kya");
+        this.router.navigate(['/season',series_id]); 
   }
- 
+}

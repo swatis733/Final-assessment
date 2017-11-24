@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.service.email = '';
+    this.service.Shows=false;
     this.route.navigate(["/home"]);
   }
 }
